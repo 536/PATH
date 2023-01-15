@@ -1,6 +1,8 @@
 @echo off
-IF NOT EXIST %cd%\venv\ (
-    python -m venv venv
+IF NOT EXIST venv/ (
+    echo Creating new venv...
+    py -3.8 -m venv venv
 )
 
-venv\scripts\activate
+echo Activate venv...
+venv\Scripts\activate && python -V && pip -V
